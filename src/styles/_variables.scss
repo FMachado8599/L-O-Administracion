@@ -1,0 +1,24 @@
+@use "utopia-core-scss/src/utopia" as utopia;
+  
+/* @link https://utopia.fyi/space/calculator?c=360,14,1.333,1250,16,1.333,5,1,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+  $color-primary:   #012D4F;
+  $color-secondary: #2E2E2E;
+  $color-background:#FFFFFF;
+
+  $component-width: clamp(360px, 100vw, 1250px);
+
+:root {
+  @include utopia.generateSpaceScale((
+    "minWidth": 360,
+    "maxWidth": 1250,
+    "minSize": 14,
+    "maxSize": 16,
+    "positiveSteps": (1.5, 2, 3, 4, 6),
+    "negativeSteps": (0.75, 0.5, 0.25),
+    "customSizes": ("s-l"),
+    "prefix": "space-",
+    "relativeTo": "viewport-width",
+  ));
+
+}
