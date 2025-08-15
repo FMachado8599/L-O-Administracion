@@ -4,7 +4,9 @@
 
   $color-primary:   #012D4F;
   $color-secondary: #2E2E2E;
-  $color-background:#FFFFFF;
+  $color-background: #F5FBFF;
+  $font-light: $color-secondary;
+  $font-dark: #F5FBFF; 
 
   $component-width: clamp(360px, 100vw, 1250px);
 

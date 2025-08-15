@@ -7,18 +7,19 @@ export default function Services() {
 
   return (
     <section className="services">
-      <h2>{services.title}</h2>
-      <p>{services.intro}</p>
+      <h2 className="services-title">{services.title}</h2>
+      <h5 className="services-subtitle">{services.intro}</h5>
 
-      <ul className="services__list">
+      <ul className="services-list">
         {items.map((item, idx) => (
-          <li key={item.title ?? idx} className="services__item">
+          <li key={item.title ?? idx} className="services-item">
             <img
             src={new URL(`/src/assets/media/icons/${item.img}`, import.meta.url).href}
             alt={`Icono de ${item.description}`}
+            className="services-item-icon"
             />
-            <h3>{item.title}</h3>
-            {item.description && <p>{item.description}</p>}
+            <h5 className="services-item-title">{item.title}</h5>
+            {item.description && <p className="service-item-description">{item.description}</p>}
           </li>
         ))}
       </ul>

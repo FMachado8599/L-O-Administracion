@@ -6,7 +6,7 @@ export default function FAQ() {
     const faq = text.faq;
 
   return (
-    <section>
+    <section >
         <h2>{faq.title}</h2>
         <h3>{faq.subtitle}</h3>
         <div>

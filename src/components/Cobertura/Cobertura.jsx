@@ -9,35 +9,41 @@ export default function Cobertura() {
     const cta = text.cta ?? {};
 
   return (
-    <section>
-        <div>
-            <h2>{coverage.title}</h2>
-            <h3>{coverage.intro}</h3>
-            <div className="cobertura__lists">
-                {sections.map((section, sIdx) => {
-                const items = Array.isArray(section.items) ? section.items : [];
-                return (
-                    <div key={section.title ?? sIdx} className="cobertura__list">
-                    {section.title && <h4>{section.title}</h4>}
-                    <ul>
-                        {items.map((item, iIdx) => (
-                        <li key={`${section.title ?? sIdx}-${iIdx}`}>{item}</li>
-                        ))}
-                    </ul>
-                    </div>
-                );
-                })}
-            </div>            
-        </div>
-        <div>
-            {cta.title && <h2>{cta.title}</h2>}
-            {cta.text && <p>{cta.text}</p>}
-            {cta.button && (
-                <div className="cta__actions">
-                <button type="button">{cta.button}</button>
+    <div className='coverage-container'>
+        <section className='coverage'>
+            <div className='coverage-text coverage-sub-section'>
+                <div className='coverage-titles'>
+                    <h2 className='coverage-title'>{coverage.title}</h2>
+                    <h3 className='coverage-subtitle'>{coverage.intro}</h3>                    
                 </div>
-            )} 
-        </div>
-    </section>
+                <div className="coverage-lists">
+                    {sections.map((section, sIdx) => {
+                    const items = Array.isArray(section.items) ? section.items : [];
+                    return (
+                        <div key={section.title ?? sIdx} className="coverage-list">
+                            {section.title && <h5>{section.title}</h5>}
+                            <ul>
+                                {items.map((item, iIdx) => (
+                                <li key={`${section.title ?? sIdx}-${iIdx}`}>{item}</li>
+                                ))}
+                            </ul>
+                        </div>
+                    );
+                    })}
+                </div>            
+            </div>
+            <div className='coverage-card-container coverage-sub-section'>
+                <div className='coverage-card'>
+                    {cta.title && <h2 className='coverage-card-title'>{cta.title}</h2>}
+                    {cta.text && <p className='coverage-card-text'>{cta.text}</p>}
+                    {cta.button && (
+                        <div className="cta__actions">
+                        <button type="button" className='card-button-cta'>{cta.button}</button>
+                        </div>
+                    )} 
+                </div>
+            </div>
+        </section>
+    </div>
   )
 }

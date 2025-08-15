@@ -1,0 +1,36 @@
+@mixin button{
+    padding: var(--step-0) var(--step-2);
+    cursor: pointer;
+    transition: all .2s ease-in;
+}
+
+@mixin button-primary{
+    @include button;
+    background-color: var(--color-primary);
+    font-weight: 500;
+    &:hover{
+        background-color: hsl(from var(--color-primary) h s 20% / 100%) 
+    }
+}
+
+@mixin button-secondary{
+    @include button;
+    border: 1px solid var(--font-dark);
+    font-weight: 500;
+    background-color: transparent;
+    &:hover{
+        background-color: hsl(from var(--color-primary) h s l / 30%) 
+    }
+}
+
+@mixin button-tertiary{
+    @include button;
+    background-color: var(--color-background);
+    color: var(--color-primary);
+    font-weight: 500;
+    border: 3px solid transparent;
+    &:hover{
+        border: 3px solid var(--color-primary);
+        box-shadow: 0 10px 15px -4px rgb(from #000000 r g b / 20%), 0 4px 6px -3px rgb(from #000000 r g b / 20%);
+    }
+}

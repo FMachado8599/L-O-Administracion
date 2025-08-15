@@ -12,7 +12,7 @@
   --type--3: clamp(0.25rem,   0.25rem   + 0vw,      0.25rem);
   --type--2: clamp(0.4375rem, 0.4122rem + 0.1124vw, 0.5rem);
   --type--1: clamp(0.6875rem, 0.6622rem + 0.1124vw, 0.75rem);
-  --type-0:  var(--step-0);
+  --type-0:  clamp(0.890rem, 0.9367rem + 0.160vw, 1.2rem);
   --type-1:  clamp(1.3125rem, 1.2367rem + 0.3371vw, 1.5rem);
   --type-2:  clamp(1.75rem,   1.6489rem + 0.4494vw, 2rem);
   --type-3:  clamp(2.625rem,  2.4733rem + 0.6742vw, 3rem);
@@ -31,8 +31,10 @@
    /* === COLORS === */
    --color-primary:    #012D4F;
    --color-secondary:  #2E2E2E;
-   --color-font-primary:  #1d1d1d;
+   --color-tertiary: #1D4987;
    --color-background: #FFFFFF;
+   --font-light:  #1d1d1d;
+   --font-dark: #F5FBFF; 
 
   /* === LAYOUT TOKENS === */
    --component-width: clamp(360px, 100vw, 1250px);

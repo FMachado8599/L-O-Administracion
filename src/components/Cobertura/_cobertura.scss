@@ -1,0 +1,83 @@
+@use '../../styles/mixins' as *;
+
+$text-color: hsl(from #000000 h s 80% / 100%);
+
+.coverage-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-primary);
+    color: var(--font-dark);
+    & .coverage{
+        display: flex;
+        flex-direction: row;
+        text-wrap: pretty;
+        gap: var(--space-3);
+        & .coverage-sub-section{
+            width: 50%;
+        }
+        & .coverage-text{
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-2);
+            & .coverage-titles{
+                display: flex;
+                flex-direction: column;
+                gap: var(--space--2);
+                & .coverage-title{
+                    font-size: var(--type-2);
+                }
+                & .coverage-subtitle{
+                    font-size: var(--type-0);
+                    color: $text-color;
+                    font-weight: 400;
+                }                
+            }
+            & .coverage-lists{
+                display: flex;
+                flex-direction: row;
+                gap: var(--space-2);
+                & .coverage-list{
+                    display: flex;
+                    flex-direction: column;
+                    gap: var(--space--2);
+                    min-width: 280px;
+                    & ul{
+                        list-style-type: disc;
+                        list-style-position: inside;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                        color: $text-color;
+                    }
+                }
+            }            
+        }
+        & .coverage-card-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            & .coverage-card{
+                display: flex;
+                flex-direction: column;
+                background-color: hsl(from white h s l / 10%);
+                padding: var(--space-2);
+                height: fit-content;
+                gap: var(--space--2);
+                & .coverage-card-title{
+                    font-size: var(--type-1);
+                }
+                & .coverage-card-text{
+                    width: 100%;
+                }
+                & .card-button-cta{
+                    margin-top: var(--space-2);
+                    @include button-tertiary;
+                }
+            }
+        }
+    }
+}

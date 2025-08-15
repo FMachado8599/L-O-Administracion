@@ -7,31 +7,29 @@ export default function Benefits() {
     const bullets = benefits?.bullets ?? [];
 
   return (
-    <div>
         <section className="benefits">
-            <h2>
-                {benefits.title}
-                <span>
-                    {benefits.kicker}
-                </span>
-            </h2>
-            <p>{benefits.subtitle}</p>
-
-                <ul className="benefits__list">
+            <div className='benefits-text-container'>
+                <div className='benefits-title-container'>
+                    <h2 className='benefits-title'>{benefits.title}</h2>
+                    <h2 className='benefits-title-kicker'>{benefits.kicker}</h2>
+                </div>
+                <h5 className='benefits-subtitle'>{benefits.subtitle}</h5>
+            </div>
+            <ul className="benefits-list">
                 {bullets.map((bullet, idx) => (
-                    <li key={bullet.label ?? idx} className="benefits__item">
+                    <li key={bullet.label ?? idx} className="benefits-item">
                     {bullet.img && (
                         <img
                         src={new URL(`/src/assets/media/icons/${bullet.img}`, import.meta.url).href}
                         alt={`Icono de ${bullet.label}`}
+                        className='benefits-item-icon'
                         />
                     )}
-                    <h3>{bullet.label}</h3>
+                    <h5 className='benefits-item-title'>{bullet.label}</h5>
                     {bullet.text && <p>{bullet.text}</p>}
                     </li>
                 ))}
             </ul>
         </section>
-    </div>
   )
 }

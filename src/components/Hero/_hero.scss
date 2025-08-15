@@ -1,0 +1,47 @@
+@use '../../styles/_mixins' as *;
+
+.hero-container{
+    height: clamp(500px, 100dvh, 620px);
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    & .hero-img{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        filter: brightness(60%) contrast(110%);
+        z-index: -10;
+    }
+    & .hero{
+        display: flex;
+        flex-direction: column;
+        place-items: center;
+        text-align: center;
+        color: var(--font-dark);
+        & .hero-title{
+          display: flex;
+          flex-direction: column;  
+
+        }
+        & .hero-subtitle{
+
+        }
+        & .hero-button-container{
+            margin-top: var(--space-4);
+            display: flex;
+            flex-direction: row;
+            gap: var(--step-0);
+            & button:nth-child(1){
+                @include button-primary;
+            }
+            & button:nth-child(2){
+                @include button-secondary;
+            }
+        }
+    }
+}
