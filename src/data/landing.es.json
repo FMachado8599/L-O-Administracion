@@ -6,7 +6,13 @@
   "header": {
     "topbar": {
       "phone": "{{telPrincipal}}",
-      "email": "{{email}}"
+      "email": "{{email}}",
+      "wa": { "message": "{{waMessage}}" }, 
+      "social": [
+        { "type": "linkedIn", "href": "https://www.linkedin.com/company/tu-empresa" },
+        { "type": "instagram", "href": "https://www.instagram.com/tu-empresa" },
+        { "type": "facebook", "href": "https://www.facebook.com/tu-empresa" }
+      ]
     },
     "nav": [
       { "key": "home", "label": "Inicio" },
@@ -26,12 +32,12 @@
     "title": "Servicios Completos de Administración de Propiedades",
     "intro": "Ofrecemos soluciones integrales de administración de propiedades que maximizan el retorno de tu inversión mientras minimizan tu participación.",
     "items": [
-      { "title": "Selección de Inquilinos", "description": "Verificaciones de antecedentes exhaustivas, verificación crediticia y evaluación laboral para asegurar inquilinos de calidad para tu propiedad.", "img":"people.svg" },
-      { "title": "Administración de Condominios", "description": "Administración completa de asociaciones de propietarios y condominios incluyendo reuniones de consorcio, presupuestos y mantenimiento comunitario.", "img":"people.svg" },
-      { "title": "Cobro de Alquileres", "description": "Cobro automatizado de alquileres con seguimiento inmediato de pagos atrasados. Manejamos todos los aspectos del procesamiento de pagos y gestión de morosidad.", "img":"people.svg" },
-      { "title": "Mantenimiento de Propiedades", "description": "Coordinación de mantenimiento 24/7 con nuestra red de contratistas de confianza. Desde reparaciones de emergencia hasta mantenimiento preventivo.", "img":"people.svg" },
-      { "title": "Legal y Cumplimiento", "description": "Mantente en cumplimiento con las regulaciones locales y leyes de vivienda. Manejamos desalojos, avisos legales y requisitos regulatorios.", "img":"people.svg" },
-      { "title": "Reportes Financieros", "description": "Reportes financieros mensuales detallados con ingresos, gastos y análisis para ayudarte a monitorear el rendimiento de tu inversión.", "img":"people.svg" }
+      { "type": "tenant-selection", "title": "Selección de Inquilinos", "description": "Verificaciones de antecedentes exhaustivas, verificación crediticia y evaluación laboral para asegurar inquilinos de calidad para tu propiedad.", "img":"people.svg" },
+      { "type": "administracion-condominios", "title": "Administración de Condominios", "description": "Administración completa de asociaciones de propietarios y condominios incluyendo reuniones de consorcio, presupuestos y mantenimiento comunitario.", "img":"people.svg" },
+      { "type": "cobros", "title": "Cobro de Alquileres", "description": "Cobro automatizado de alquileres con seguimiento inmediato de pagos atrasados. Manejamos todos los aspectos del procesamiento de pagos y gestión de morosidad.", "img":"people.svg" },
+      { "type": "mantenimiento", "title": "Mantenimiento de Propiedades", "description": "Coordinación de mantenimiento 24/7 con nuestra red de contratistas de confianza. Desde reparaciones de emergencia hasta mantenimiento preventivo.", "img":"people.svg" },
+      { "type": "legal", "title": "Legal y Cumplimiento", "description": "Mantente en cumplimiento con las regulaciones locales y leyes de vivienda. Manejamos desalojos, avisos legales y requisitos regulatorios.", "img":"people.svg" },
+      { "type": "reportes", "title": "Reportes Financieros", "description": "Reportes financieros mensuales detallados con ingresos, gastos y análisis para ayudarte a monitorear el rendimiento de tu inversión.", "img":"people.svg" }
     ]
   },
   "benefits": {
@@ -99,16 +105,21 @@
   },
   "contact_block": [
     {
+      "type": "tel",
       "icon": "people.svg",
       "title": "Teléfono",
-      "value": "{{telPrincipal}}"
+      "value": "{{telPrincipal}}",
+       "wa": true
     },
     {
+      "type": "tel",
       "icon": "people.svg",
       "title": "WhatsApp",
-      "value": "{{telPrincipal}}"
+      "value": "{{telPrincipal}}",
+       "wa": true
     },
     {
+      "type": "email",
       "icon": "people.svg",
       "title": "E-mail",
       "value": "{{email}}"
@@ -131,9 +142,9 @@
         "logo": "l-o-admin_logo_dark.webp",
         "text": "Servicios profesionales de administración de propiedades que maximizan el retorno de tu inversión.",
         "icons": [
-          { "icon": "people.svg", "id": 1 },
-          { "icon": "people.svg", "id": 2 },
-          { "icon": "people.svg", "id": 3 }
+          { "type": "linkedIn", "href": "https://www.linkedin.com/company/tu-empresa" },
+          { "type": "instagram", "href": "https://www.instagram.com/tu-empresa" },
+          { "type": "facebook", "href": "https://www.facebook.com/tu-empresa" }
         ]
       },
       "servicios": {
@@ -158,11 +169,15 @@
       },
       "contacto": {
         "title": "Contacto",
+        "wa": {
+          "phone": "{{telPrincipal}}",
+          "message": "{{waMessage}}"
+        },
         "items": [
-          "{{telPrincipal}}",
-          "{{telSecundario}}",
-          "{{email}}",
-          "{{direccion}}"
+          { "type": "tel",   "label": "Teléfono",  "value": "{{telPrincipal}}", "wa": true },
+          { "type": "tel",   "label": "Celular",   "value": "{{telSecundario}}", "wa": true },
+          { "type": "email", "label": "Email",     "value": "{{email}}" },
+          { "type": "addr",  "label": "Dirección", "value": "{{direccion}}" }
         ]
       }
     },

@@ -9,15 +9,28 @@
    --step-4:  clamp(2.7627rem, 2.603rem + 0.7095vw, 3.1573rem);
    --step-5:  clamp(3.6826rem, 3.4698rem + 0.9458vw, 4.2087rem);
 
-  --type--3: clamp(0.25rem,   0.25rem   + 0vw,      0.25rem);
-  --type--2: clamp(0.4375rem, 0.4122rem + 0.1124vw, 0.5rem);
-  --type--1: clamp(0.6875rem, 0.6622rem + 0.1124vw, 0.75rem);
-  --type-0:  clamp(0.890rem, 0.9367rem + 0.160vw, 1.2rem);
-  --type-1:  clamp(1.3125rem, 1.2367rem + 0.3371vw, 1.5rem);
-  --type-2:  clamp(1.75rem,   1.6489rem + 0.4494vw, 2rem);
-  --type-3:  clamp(2.625rem,  2.4733rem + 0.6742vw, 3rem);
-  --type-4:  clamp(3.5rem,    3.2978rem + 0.8989vw, 4rem);
-  --type-5:  clamp(5.25rem,   4.9466rem + 1.3483vw, 6rem);
+  /* Step -3: 9.2593px → 11.5741px */
+  --type--3: clamp(0.5787rem, 0.5465rem + 0.1474vw, 0.7234rem);
+  /* Step -2: 11.1111px → 13.8889px */
+  --type--2: clamp(0.6944rem, 0.6557rem + 0.1769vw, 0.8681rem);
+  /* Step -1: 13.3333px → 16.6667px */
+  --type--1: clamp(0.8333rem, 0.7869rem + 0.2123vw, 1.0417rem);
+  /* Step 0: 16px → 20px */
+  --type-0: clamp(1rem, 0.9443rem + 0.2548vw, 1.25rem);
+  /* Step 1: 19.2px → 24px */
+  --type-1: clamp(1.2rem, 1.1331rem + 0.3057vw, 1.5rem);
+  /* Step 2: 23.04px → 28.8px */
+  --type-2: clamp(1.44rem, 1.3597rem + 0.3669vw, 1.8rem);
+  /* Step 3: 27.648px → 34.56px */
+  --type-3: clamp(1.728rem, 1.6317rem + 0.4403vw, 2.16rem);
+  /* Step 4: 33.1776px → 41.472px */
+  --type-4: clamp(2.0736rem, 1.958rem + 0.5283vw, 2.592rem);
+  /* Step 5: 39.8131px → 49.7664px */
+  --type-5: clamp(2.4883rem, 2.3496rem + 0.634vw, 3.1104rem);
+  /* Step 6: 47.7757px → 59.7197px */
+  --type-6: clamp(2.986rem, 2.8196rem + 0.7608vw, 3.7325rem);
+  /* Step 7: 57.3309px → 71.6636px */
+  --type-7: clamp(3.5832rem, 3.3835rem + 0.9129vw, 4.479rem);
 
    /* === SPACING ===*/
    --space--2: clamp(0.25rem, 0.23rem + 0.1vw, 0.375rem);
@@ -29,11 +42,15 @@
    --space-4:  clamp(2rem,    1.7rem + 1vw,    3rem);
 
    /* === COLORS === */
-   --color-primary:    #012D4F;
+   --color-primary:    #0E2442;
    --color-secondary:  #2E2E2E;
    --color-tertiary: #1D4987;
+   --color-cuartiary: #111827; /* yes, I can, I am doing it, Im inventing "cuartiary" */
    --color-background: #FFFFFF;
+   --color-background-2: hsl(from var(--color-background) h s 97% / 100%);
    --font-light:  #1d1d1d;
+   --font-light-2:  hsl(from var(--font-light) h s 50% / 100%);
+   --font-light-3:  hsl(from var(--font-light) h s 70% / 100%);
    --font-dark: #F5FBFF; 
 
   /* === LAYOUT TOKENS === */

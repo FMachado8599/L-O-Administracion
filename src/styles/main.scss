@@ -1,7 +1,12 @@
+
+
+/* imports mapeados a capas */
 @use './_theme.scss';
 @use "./globals" as *;
 @use "./_mixins" as *;
 @use './mediaQueries';
+
+@layer reset, base, components, pages, utilities, responsive;
 
 /* =========================   RESET / NORMALIZE ========================= */
 
@@ -44,7 +49,8 @@ body {
 ul,
 ol {
   list-style: none;
-  padding: 0;
+  padding: 0px;
+  margin-bottom: 0px;
 }
 
 a {
@@ -75,4 +81,40 @@ button {
 table {
   border-collapse: collapse;
   width: 100%;
+}
+
+@media screen and (max-width: 1250px) {
+    .coverage{
+        flex-direction: column !important;
+        flex-wrap: wrap !important;        
+        & .coverage-sub-section{
+            width: 100% !important;
+        }
+    }
+    .about-us{
+        flex-direction: column !important;
+        & div{
+            width: 100% !important;
+        }
+    }
+    form{
+        & .contact-fields{
+            & .contact-field{
+                & label{
+                    font-size: var(--type-0) !important;
+                }
+                & textarea, & input{
+                    font-size: var(--type-0) !important;                
+                    &::placeholder{
+                        font-size: var(--type-0) !important;
+                        font-weight: 400 !important;
+                    }
+                }
+            }
+        }
+    }
+    .contact-bar{
+      flex-direction: column !important;
+      gap: var(--step-2);
+    }
 }

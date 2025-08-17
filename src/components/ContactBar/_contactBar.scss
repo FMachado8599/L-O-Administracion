@@ -1,0 +1,21 @@
+.contact-bar{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    & .contact-item{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        text-align: center;
+        gap: var(--step--1);
+        align-items: center;
+        cursor: pointer;
+        & div{
+            & .contact-item-title{
+                font-size: var(--type--1);
+            }
+        }
+    }
+}

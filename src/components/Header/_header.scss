@@ -3,12 +3,15 @@ header{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    height: var(--step-5);
+    height: var(--step-4);
     & .logo{
-        max-height: 34px;
+        max-height: var(--type-3);
         width: auto;
     }
     & nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         & ul{
             display: flex;
             flex-direction: row;
@@ -43,7 +46,9 @@ header{
                         opacity: 1;
                     }
                 }
-
+                & a{
+                    font-size: var(--type--2);
+                }
             }
         }
     }

@@ -7,20 +7,33 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    & .topbar_container{
+    & .topbar-container{
         display: flex;
         flex-direction: row;
         gap: 15px;
         align-items: center;
         justify-content: flex-end;
         height: 100%;
-        & a{
+        & a, & button{
             display: flex;
             flex-direction: row;
             gap: 5px;
             align-items: center ;
             cursor: pointer;
-            font-size: var(--type--1);
+            font-size: var(--type--3);
+        }
+        & .topbar-socials-container{
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            & .topbar-social{
+                width: var(--type-0);
+                height: var(--type-0);
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }
         }
     }
 }

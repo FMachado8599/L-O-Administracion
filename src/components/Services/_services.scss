@@ -7,7 +7,6 @@
     text-align: center;
     & .services-title{
         color: var(--color-tertiary);
-        font-size: var(--type-3);
     }
     & .services-subtitle{
         text-wrap: pretty;
@@ -30,16 +29,21 @@
                 box-shadow: 0 15px 20px -2px rgb(from #000000 r g b / 20%), 0 4px 6px -3px rgb(from #000000 r g b / 20%);
             }
             & .services-item-icon{
-                fill: var(--color-primary);
                 color: var(--color-primary);
-                height: var(--step-4);
+                height: var(--step-2);
+                width: auto;
+                aspect-ratio: 1/1;
                 margin-bottom: var(--step-0);
                 stroke: var(--color-primary);
             }
             & .services-item-title{
                 font-weight: 600;
                 color: var(--color-primary);
+                margin-bottom: var(--space--2);
             }
+            & .services-item-description{
+                font-size: var(--type--2);
+            }            
         }
     }
 }

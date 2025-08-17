@@ -1,10 +1,15 @@
 import text from "@/data/landing.es.json";
 import { replaceVars } from "@/utils/replaceVars";
+import './styles/_footer-info.scss';
+import { normalizePhoneForWa, buildWaHref, buildContactHref } from '../../utils/phoneNumbersAdaptation'
+import { ContactIcon, infoIcon } from '../../utils/icons'
 
 export default function FooterInfo() {
-  const footer = text.footer ?? {};
-  const lists = footer.lists ?? {};
 
+  const landing = replaceVars(text);
+
+  const footer = landing.footer ?? {};
+  const lists = footer.lists ?? {};
 
   // Tagline
   const tagline = lists.tagline ?? {};
@@ -21,69 +26,124 @@ export default function FooterInfo() {
   const areasTitle = areas.title || "Áreas";
   const areasItems = Array.isArray(areas.items) ? areas.items : [];
 
+  // Contacto (ya resuelto)
   const contacto = lists.contacto ?? {};
   const contactoTitle = contacto.title || "Contacto";
-  const landing = replaceVars(text);
-  const contactItems = landing.footer.lists.contacto.items;
+  const contactItems = Array.isArray(contacto.items) ? contacto.items : [];
+
+  // Link WA global del JSON (opcional para un CTA o para el ícono del tagline)
+  const waPhone = contacto.wa?.phone || "";
+  const waMessage = contacto.wa?.message || "";
+  const waHref = buildWaHref(waPhone, waMessage);
 
   return (
-    <div className="footer">
+    <div className="content">
       {/* Tagline */}
-      <div className="footer__tagline">
+      <div className="footer-tagline">
         {taglineLogo && (
           <img
-            src={
-              // si guardaste solo el nombre de archivo:
-              new URL(`/src/assets/media/logo/${taglineLogo}`, import.meta.url).href
-            }
+            src={new URL(`/src/assets/media/logo/${taglineLogo}`, import.meta.url).href}
             alt="Logo"
+            className="footer-logo"
           />
         )}
+
         {taglineText && <p>{taglineText}</p>}
 
         {!!taglineIcons.length && (
-          <div className="footer__tagline-icons">
+          <div className="footer-tagline-icons">
             {taglineIcons.map((it, idx) => {
-              const src =
-                typeof it === "string"
-                  ? it
-                  : it?.icon
-                  ? new URL(`/src/assets/media/icons/${it.icon}`, import.meta.url).href
-                  : null;
-              return src ? <img key={it?.id ?? idx} src={src} alt="" /> : null;
+              // it = { type: "linkedIn" | "instagram" | "facebook", href: "..." }
+              if (!it?.href) return null;
+
+              return (
+                <a
+                  key={`${it.type}-${idx}`}
+                  className="footer-tagline-icon-link"
+                  href={it.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={it.type}
+                  title={it.type}
+                >
+                  {infoIcon({ item: { type: it.type } })} {/* ⬅️ ícono desde icons.jsx */}
+                </a>
+              );
             })}
           </div>
         )}
       </div>
-
-      {/* Servicios y Áreas juntos */}
-      <div className="footer__lists">
-        <div className="footer__list">
-          <h3>{serviciosTitle}</h3>
-          <ul>
-            {serviciosItems.map((item, idx) => (
-              <li key={idx}>{item}</li>
-            ))}
-          </ul>
-        </div>
-
-        <div className="footer__list">
-          <h3>{areasTitle}</h3>
-          <ul>
-            {areasItems.map((item, idx) => (
-              <li key={idx}>{item}</li>
-            ))}
-          </ul>
-        </div>
-      </div>
-
-      {/* Contacto */}
-      <div className="footer__contact">
-        <h3>{contactoTitle}</h3>
+      <div className="footer-list">
+        <h6>{serviciosTitle}</h6>
         <ul>
-          {contactItems.map((item, idx) => (
-            <li key={idx}>{item}</li>
+          {serviciosItems.map((item, idx) => (
+            <li key={idx}>
+              <a href="">
+                {item}
+              </a>
+            </li>
           ))}
+        </ul>
+      </div>
+      <div className="footer-list">
+        <h6>{areasTitle}</h6>
+        <ul>
+          {areasItems.map((item, idx) => (
+            <li key={idx}><a href="">{item}</a></li>
+          ))}
+        </ul>
+      </div>
+      <div className="footer-list">
+        <h6>{contactoTitle}</h6>
+        <ul>
+          {contactItems.map((it, idx) => {
+            const label = it.label ? `${it.label}: ` : "";
+
+            // Email
+            if (it.type === "email") {
+              const handleCopy = () => {
+                navigator.clipboard.writeText(it.value).then(() => {
+                  alert("Email copiado al portapapeles ✅");
+                });
+              };
+              return (
+                <li key={idx}>
+                  <button type="button" onClick={handleCopy} className="copy-email-btn">
+                    <ContactIcon item={it} className="contact-icon" />
+                    {label}{it.value}
+                  </button>
+                </li>
+              );
+            }
+
+            // Dirección
+            if (it.type === "addr") {
+              const mapsHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(it.value)}`;
+              return (
+                <li key={idx}>
+                  <a
+                    href={mapsHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <ContactIcon item={it} className="contact-icon" />
+                    {label}{it.value}
+                  </a>
+                </li>
+              );
+            }
+
+            // Teléfonos y WhatsApp
+            const href = buildContactHref(it, waMessage);
+            return (
+              <li key={idx}>
+                <a href={href} target="_blank" rel="noopener noreferrer">
+                  <ContactIcon item={it} className="contact-icon" />
+                  {label}{it.value}
+                </a>
+              </li>
+            );
+          })}
         </ul>
       </div>
     </div>

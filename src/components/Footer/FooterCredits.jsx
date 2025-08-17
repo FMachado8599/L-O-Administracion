@@ -6,6 +6,6 @@ export default function FooterCredits() {
     const credit = text.footer.credit;
 
   return (
-    <div>{credit}</div>
+    <div className='footer-credit'>{credit}</div>
   )
 }

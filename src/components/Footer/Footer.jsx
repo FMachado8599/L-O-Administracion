@@ -6,7 +6,7 @@ import './styles/_footer.scss'
 export default function Footer() {
   return (
     <footer>
-        <div>
+        <div className='footer-content-container'>
             <FooterInfo />
             <FooterLegal />
             <FooterCredits />

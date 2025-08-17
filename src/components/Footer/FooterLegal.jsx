@@ -6,7 +6,7 @@ export default function FooterLegal() {
     const legal = text.footer.legal;
 
   return (
-    <div>
+    <div className='footer-legal'>
         <span>{text.footer.copyright}</span>
         {legal.map((item, idx) => (
             <span key={idx}>

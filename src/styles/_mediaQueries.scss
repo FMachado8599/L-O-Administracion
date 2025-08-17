@@ -1,5 +1,32 @@
+@layer responsive{
     @media screen and (max-width: 1250px) {
-        .coverage{
+        :global(.coverage){
             flex-direction: column;
+            flex-wrap: wrap;        
+            & :global(coverage-sub-section){
+                width: 100%;
+            }
+        }
+        .about-us{
+            flex-direction: column;
+            & div{
+                width: 100%;
+            }
+        }
+        .form{
+            & .contact-fields{
+                & .contact-field{
+                    & label{
+                        font-size: var(--type--1);
+                    }
+                    & textarea,input{
+                        font-size: var(--type--1);                
+                        &::placeholder{
+                            font-size: var(--type--1);
+                        }
+                    }
+                }
+            }
         }
     }
+}

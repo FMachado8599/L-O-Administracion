@@ -8,17 +8,21 @@ export default function AboutUs() {
     const paragraphs = about?.paragraphs ?? [];
 
   return (
-    <section>
-        <div>
+    <section className='about-us'>
+        <div className='about-us-images-container'>
             {images.map((image,idx) => (
-                <img src={image} key={image ?? idx} alt="Imagen de propietarios" />
+                <figure className='about-us-image-figure'>
+                    <img src={image} key={image ?? idx} alt="Imagen de propietarios" />
+                </figure>
             ))}
         </div>
-        <div>
+        <div className='about-us-text'>
             <h2>{about.title}</h2>
-            {paragraphs.map((text,idx) => (
-                <p key={text ?? idx}>{text}</p>
-            ))}
+            <div className='about-us-text-container'>
+                {paragraphs.map((text,idx) => (
+                    <p key={text ?? idx}>{text}</p>
+                ))}
+            </div>
         </div>
     </section>
   )

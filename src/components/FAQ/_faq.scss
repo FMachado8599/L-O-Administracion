@@ -1,0 +1,33 @@
+@use '../../styles/globals.scss' as  *;
+
+.faq-container{
+    background-color: var(--color-background-2);
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    & .faq{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--step-0);
+    }
+    & .faq-titles{
+        text-align: center;
+    }
+    & .faq-card{
+        background-color: var(--color-background);
+        padding: var(--step-1);
+        display: flex;
+        flex-direction: column;
+        gap: var(--step--1);
+        & h6{
+            font-size: var(--type--1);
+        }
+        & p{
+            font-size: var(--type--2);
+            font-weight: 400;
+        }
+    }
+}

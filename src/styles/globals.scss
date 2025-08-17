@@ -4,6 +4,10 @@ html {
     scroll-behavior: smooth;
 }
 
+h1, h2, h3, h4, h5, h6, p{
+  margin-bottom: 0px;
+}
+
 section, header{
     width: var(--component-width);
 }
@@ -13,11 +17,13 @@ section{
 }
 
 // OTHER SIZES
-h1 { font-size: var(--type-4); line-height: 1.1; }
-h2 { font-size: var(--type-3); line-height: 1.15; font-weight: 700; }
+h1 { font-size: var(--type-5); line-height: 1.1; font-weight: 700; }
+h2 { font-size: var(--type-2); line-height: 1.15; font-weight: 700; }
 h3 { font-size: var(--type-2); line-height: 1.2; }
 h4 { font-size: var(--type-2); line-height: 1.25; }
 h5 { font-size: var(--type-1); line-height: 1.3; }
 h6 { font-size: var(--type-0); line-height: 1.35; }
+.h7 { font-size: var(--type--1); line-height: 1.40; color: var(--font-light-2)}
+p {font-size: var(--type--2); font-weight: 600; color: var(--font-light-2)}
 
 small { font-size: var(--type--1); }
