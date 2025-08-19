@@ -129,11 +129,13 @@
     "title": "Preguntas Frecuentes",
     "subtitle":"Obtén respuestas a las preguntas más comunes sobre nuestros servicios de administración de propiedades.",
     "questions": [
+      { "q": "¿Qué es la Propiedad Horizontal?", "a": "Es un régimen jurídico que regula edificios o conjuntos inmobiliarios divididos en unidades individuales (apartamentos, locales) y bienes comunes (pasillos, azoteas, ascensores). Se rige por la Ley 10.751 de 1946 y sus modificativas." },
+      { "q": "¿Qué son los gastos comunes?", "a": "Son los gastos necesarios para el funcionamiento del edificio: limpieza, electricidad, ascensor, seguros, honorarios, reparaciones, entre otros. Todos los propietarios deben contribuir al pago de estos costos." },
+      { "q": "¿Qué pasa si no pago los gastos comunes?", "a": "El Administrador puede iniciar un juicio de cobro y trabar embargo sobre la unidad. La deuda genera intereses y es una obligación legal y solidaria del propietario." },
+      { "q": "¿Quién es el Administrador y cuáles son sus funciones?", "a": "Es el representante legal de la copropiedad. Sus cometidos están detallados en el Art. 19 de la Ley 10.751: conservar el edificio, ejecutar decisiones de la Asamblea, cobrar los gastos comunes, llevar la contabilidad y rendir cuentas, entre otros." },
       { "q": "¿Cómo se cobra su servicio?", "a": "Cobramos un porcentaje competitivo del alquiler cobrado (típicamente 8-12% dependiendo del tipo de propiedad y servicios requeridos). Sin tarifas iniciales, y solo cobramos cuando tú cobras. Pueden aplicar tarifas de configuración y colocación de inquilinos." },
       { "q": "¿Qué pasa si un inquilino deja de pagar el alquiler?", "a": "Seguimos un enfoque sistemático: contacto inmediato con el inquilino, negociaciones de plan de pago si es apropiado, y acción legal si es necesario. Manejamos todos los procedimientos de desalojo y trabajamos para minimizar el tiempo de vacante y pérdida de ingresos." },
-      { "q": "¿Con qué frecuencia recibo actualizaciones o reportes?", "a": "Recibes reportes financieros mensuales detallados incluyendo ingresos, gastos y actualizaciones del estado de la propiedad. Además, proporcionamos notificaciones inmediatas para cualquier asunto urgente, problemas de mantenimiento o preocupaciones de inquilinos." },
-      { "q": "¿Puedo cancelar el servicio en cualquier momento?", "a": "Sí, nuestros contratos de administración típicamente requieren 30 días de aviso por escrito para la terminación. Creemos en ganarnos tu negocio cada mes a través de un servicio excelente, no a través de contratos a largo plazo." },
-      { "q": "¿Manejan mantenimiento de emergencia?", "a": "Absolutamente. Proporcionamos coordinación de mantenimiento de emergencia 24/7. Nuestra red de contratistas licenciados puede responder a problemas urgentes como fugas de plomería, problemas eléctricos o preocupaciones de seguridad en cualquier momento." }
+      { "q": "¿Manejan mantenimiento de emergencia?", "a": "Sí. Coordinamos mantenimiento de emergencia 24/7 con nuestra red de contratistas licenciados para responder a fugas de plomería, problemas eléctricos o preocupaciones de seguridad en cualquier momento." }
     ]
   },
   "footer": {
