@@ -1,12 +1,15 @@
 import './_contact.scss'
 import text from "@/data/landing.es.json";
+import { SubmitButton } from "./SubmitButton.jsx";
 
 export default function ContactForm() {
+
+
   const form = text.lead_form ?? {};
   const fields = Array.isArray(form.fields) ? form.fields : [];
 
   return (
-    <div className='contact-container'>
+    <div className='contact-container' id='contact'>
       <section className="contact">
         <div className='titles'>
           {form.title && <h2>{form.title}</h2>}
@@ -49,12 +52,26 @@ export default function ContactForm() {
                 </div>
               );
             })}
+            <div className="hp-field" aria-hidden="true">
+              <label htmlFor="lead_hp">No completar</label>
+              <input
+                id="lead_hp"
+                type="text"
+                name="botField"
+                autoComplete="off"
+                tabIndex={-1}
+              />
+            </div>
           </div>
 
           {form.submit && (
-            <button type="submit" className="contact-submit button-primary">
-              {form.submit}
-            </button>
+            <SubmitButton
+              idleText={form.submit}
+              loadingText="Enviando..."
+              successText="¡Enviado!"
+              errorText="Reintentar"
+              className="contact-submit button-primary"
+            />
           )}
         </form>
       </section>

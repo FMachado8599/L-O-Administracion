@@ -7,7 +7,7 @@ export default function Services() {
   const items = services?.items ?? [];
 
   return (
-    <section className="services">
+    <section className="services" id="services">
       <h2 className="services-title">{services.title}</h2>
       <h6 className="services-subtitle h7">{services.intro}</h6>
 

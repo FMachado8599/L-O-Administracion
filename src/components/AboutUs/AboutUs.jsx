@@ -8,7 +8,7 @@ export default function AboutUs() {
     const paragraphs = about?.paragraphs ?? [];
 
   return (
-    <section className='about-us'>
+    <section className='about-us' id='about'>
         <div className='about-us-images-container'>
             {images.map((image,idx) => (
                 <figure className='about-us-image-figure'>

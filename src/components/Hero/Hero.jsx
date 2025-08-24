@@ -7,7 +7,7 @@ export default function Hero() {
     const heroItems = text.hero; 
 
   return (
-    <div className='hero-container'>
+    <div className='hero-container' id='home'>
         <img src={heroImg} alt="Imagen de montevideo en el atardecer" className='hero-img'/>
         <section className="hero">
             <h1 className="hero-title">{heroItems.title}<span>{heroItems.kicker}</span></h1>

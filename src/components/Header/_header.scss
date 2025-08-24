@@ -1,40 +1,41 @@
-header{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    height: var(--step-4);
-    & .logo{
-        max-height: var(--type-3);
-        width: auto;
-    }
-    & nav{
+.header-container{
+        position: sticky;
+        top: 0;
+        width: 100%;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
-        & ul{
+        justify-content: center;
+        z-index: 1000;
+        background-color: rgba(from var(--color-background) r g b / 70%);
+        backdrop-filter: blur(5px);
+    header{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        height: var(--step-4);
+        max-width: 1250px;
+        & .logo-container{
+            & .logo{
+                max-height: var(--type-3);
+                width: auto;
+            }
+        }
+        & nav{
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             align-items: center;
-            justify-content: space-between;
-            gap: var(--step-2);
-            & li{
-                position: relative;
-                font-weight: 500;
-                color: var(--color-font-primary);
-                &::after{
-                    content: "";
-                    position: absolute;
-                    width: 100%;
-                    bottom: 0;
-                    left: 0;
-                    height: 1px;
-                    background-color: var(--color-primary);
-                    opacity: 0;
-                    transition: all .2s ease-in;
-                }                
-                &:hover{
-                    color: var(--color-primary);
+            & ul{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                gap: var(--step-2);
+                & li{
+                    position: relative;
+                    font-weight: 500;
+                    color: var(--color-font-primary);
                     &::after{
                         content: "";
                         position: absolute;
@@ -43,11 +44,25 @@ header{
                         left: 0;
                         height: 1px;
                         background-color: var(--color-primary);
-                        opacity: 1;
+                        opacity: 0;
+                        transition: all .2s ease-in;
+                    }                
+                    &:hover{
+                        color: var(--color-primary);
+                        &::after{
+                            content: "";
+                            position: absolute;
+                            width: 100%;
+                            bottom: 0;
+                            left: 0;
+                            height: 1px;
+                            background-color: var(--color-primary);
+                            opacity: 1;
+                        }
                     }
-                }
-                & a{
-                    font-size: var(--type--2);
+                    & a{
+                        font-size: var(--type--2);
+                    }
                 }
             }
         }
