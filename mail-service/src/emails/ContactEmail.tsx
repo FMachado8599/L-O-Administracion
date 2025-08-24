@@ -3,7 +3,6 @@ import {
 } from "@react-email/components";
 import React from "react";
 import { Row, Column, Img, Link } from "@react-email/components";
-import { MailIcon, PhoneIcon } from "./ContactComponents/icons/Icons.tsx";
 
 export default function ContactEmail({ nombre, telefono, email, mensaje }) {
   return (
@@ -12,53 +11,16 @@ export default function ContactEmail({ nombre, telefono, email, mensaje }) {
       <Preview>Nueva consulta — L&O Administración</Preview>
       <Body style={main}>
         <Container style={container}>
-            <Section className="px-[32px] py-[40px]">
-              <Row>
-                  <Column className="w-[80%]">
-                    <Img
-                        alt="React Email logo"
-                        height="42"
-                        src="@"
-                    />
-                  </Column>
-                  <Column align="right">
-                    <Row align="right">
-                        <Column>
-                          <Link href="https://www.linkedin.com/company/tu-empresa">
-                            <MailIcon
-                              alt="LinkedIn"
-                              className="mx-[4px]"
-                              height="36"
-                              src="https://react.email/static/instagram-logo.png"
-                              width="36"
-                            />
-                          </Link>
-                        </Column>
-                        <Column>
-                          <Link href="#">
-                              <Img
-                              alt="Instagram"
-                              className="mx-[4px]"
-                              height="36"
-                              src="https://react.email/static/instagram-logo.png"
-                              width="36"
-                              />
-                          </Link>
-                        </Column>
-                        <Column>
-                          <Link href="#">
-                              <Img
-                              alt="Facebook"
-                              className="mx-[4px]"
-                              height="36"
-                              src="https://react.email/static/facebook-logo.png"
-                              width="36"
-                              />
-                          </Link>
-                        </Column>
-                    </Row>
-                  </Column>
-              </Row>
+          <Section className="my-[40px] px-[32px] py-[40px]">
+            <Row>
+              <Column align="center">
+                <Img
+                    alt="React Email logo"
+                    height="42"
+                    src="https://raw.githubusercontent.com/FMachado8599/L-O-Administracion/refs/heads/main/src/assets/media/logo/l-o-admin_logo_light.webp"
+                />
+              </Column>
+            </Row>
           </Section>
           <Section>
             <Text><strong>Nombre:</strong> {nombre}</Text>

@@ -51,7 +51,8 @@
    --font-light:  #1d1d1d;
    --font-light-2:  hsl(from var(--font-light) h s 50% / 100%);
    --font-light-3:  hsl(from var(--font-light) h s 70% / 100%);
-   --font-dark: #F5FBFF; 
+   --font-dark: #F5FBFF;
+   --font-dark-2: hsl(204, 0%, 80%); 
 
   /* === LAYOUT TOKENS === */
    --component-width: clamp(360px, 100vw, 1250px);

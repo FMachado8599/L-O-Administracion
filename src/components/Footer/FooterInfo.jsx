@@ -78,9 +78,7 @@ export default function FooterInfo() {
         <ul>
           {serviciosItems.map((item, idx) => (
             <li key={idx}>
-              <a href="">
-                {item}
-              </a>
+              {item}
             </li>
           ))}
         </ul>
@@ -89,7 +87,7 @@ export default function FooterInfo() {
         <h6>{areasTitle}</h6>
         <ul>
           {areasItems.map((item, idx) => (
-            <li key={idx}><a href="">{item}</a></li>
+            <li key={idx}>{item}</li>
           ))}
         </ul>
       </div>
@@ -110,7 +108,7 @@ export default function FooterInfo() {
                 <li key={idx}>
                   <button type="button" onClick={handleCopy} className="copy-email-btn">
                     <ContactIcon item={it} className="contact-icon" />
-                    {label}{it.value}
+                    {it.value}
                   </button>
                 </li>
               );
@@ -127,7 +125,7 @@ export default function FooterInfo() {
                     rel="noopener noreferrer"
                   >
                     <ContactIcon item={it} className="contact-icon" />
-                    {label}{it.value}
+                    {it.value}
                   </a>
                 </li>
               );
@@ -139,7 +137,7 @@ export default function FooterInfo() {
               <li key={idx}>
                 <a href={href} target="_blank" rel="noopener noreferrer">
                   <ContactIcon item={it} className="contact-icon" />
-                  {label}{it.value}
+                  {it.value}
                 </a>
               </li>
             );

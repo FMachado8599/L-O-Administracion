@@ -13,6 +13,7 @@
     "@react-email/components": "^0.5.1",
     "bootstrap": "^5.3.7",
     "bootstrap-icons": "^1.13.1",
+    "gsap": "^3.13.0",
     "lucide-react": "^0.539.0",
     "react": "^19.1.1",
     "react-bootstrap": "^2.10.10",

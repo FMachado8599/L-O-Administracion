@@ -47,3 +47,11 @@
         }
     }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .services .services-item {
+    opacity: 1 !important;
+    transform: none !important;
+    will-change: auto !important;
+  }
+}

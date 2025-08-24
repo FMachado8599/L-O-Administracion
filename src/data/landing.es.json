@@ -107,7 +107,7 @@
     {
       "type": "tel",
       "icon": "people.svg",
-      "title": "Teléfono",
+      "title": "Whatsapp",
       "value": "{{telPrincipal}}",
        "wa": true
     },

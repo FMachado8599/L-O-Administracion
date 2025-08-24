@@ -64,6 +64,17 @@
             & .contact-submit{
                 width: 100%;
             }
+            & .submit-wrap{
+                width: 100%;
+                & .submit-messages{
+                    width: 100%;
+                    & .msg-ok{
+                        text-align: center;
+                        height: 0px;
+                        opacity: 0;
+                    }
+                }
+            }
         }
     }
 }

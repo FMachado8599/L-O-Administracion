@@ -41,7 +41,7 @@ export function SubmitButton({
       {showMessages && (
         <div className="submit-messages" aria-live="polite">
           {status === "loading" && <p className="msg loading">{loadingText}</p>}
-          {status === "success" && <p className="msg ok">{successText}</p>}
+          {status === "success" && <p className="msg-ok">{successText}</p>}
           {status === "error" && (
             <>
               <p className="msg error">{error?.message || "Error enviando el mensaje"}</p>

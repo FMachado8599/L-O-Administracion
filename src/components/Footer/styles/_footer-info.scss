@@ -10,10 +10,10 @@
         flex-direction: column;
         gap: var(--step-0);
         & h6{
-            color: var(--font-light-3);
+            color: var(--font-dark);
         }
         & ul li{
-            color: var(--font-light-2);
+            color: var(--font-dark-2);
             font-size: var(--type--2);
             padding-bottom: var(--step--2);
             & a, button{
